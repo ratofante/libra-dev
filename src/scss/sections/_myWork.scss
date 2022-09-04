@@ -1,0 +1,21 @@
+.myWork {
+	margin-block: $marginTopSections;
+	&__text {
+		margin-bottom: $marginTopSections;
+		& h2 {
+			text-align: center;
+		}
+		& p {
+			text-align: center;
+			margin: auto;
+		}
+	}
+	&__links {
+		max-width: 300px;
+		margin: auto;
+	}
+	&__button {
+		margin-top: $marginTopSections;
+		@include displayFlex(column, center, center);
+	}
+}

@@ -1,0 +1,114 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: $navbarHeight;
+	padding: 0.5rem;
+}
+.navbarBtn {
+	background: none;
+	border: none;
+	width: 45px;
+	height: 45px;
+	padding: 0.75rem;
+	cursor: pointer;
+	color: $clr-black;
+	z-index: 11;
+	background-color: #e8e8e85c;
+	border-radius: 50%;
+	& svg {
+		width: 100%;
+		height: 100%;
+	}
+}
+nav.topNavbar {
+	display: none;
+	@include tablet {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		& ul {
+			display: flex;
+			align-items: center;
+			& li {
+				margin-right: 8vw;
+				&:nth-child(3) {
+					margin-right: 4vw;
+				}
+				&:nth-child(1):hover a {
+					color: $clr-light-blue;
+				}
+				&:nth-child(2):hover a {
+					color: $clr-brown;
+				}
+				&:nth-child(3):hover a {
+					color: $clr-light-green;
+				}
+			}
+		}
+	}
+}
+nav.sideNavbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("./assets/mobile-menu-bg.svg");
+	background-color: $clr-white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: transform 250ms ease;
+	&[aria-hidden="true"] {
+		transform: translateX(110%);
+	}
+	& ul {
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		align-self: center;
+		width: 100%;
+		& li {
+			$distancia: 30vw;
+			margin-bottom: 7rem;
+			border-bottom: 3px solid;
+			&:nth-child(1) {
+				border-color: $clr-blue;
+				padding-right: calc($distancia - 20px);
+				& a {
+					color: $clr-blue;
+				}
+			}
+			&:nth-child(2) {
+				border-color: $clr-green;
+				padding-right: $distancia;
+				& a {
+					color: $clr-green;
+				}
+			}
+			&:nth-child(3) {
+				border-color: $clr-brown;
+				padding-right: calc($distancia - 35px);
+				& a {
+					color: $clr-brown;
+				}
+			}
+		}
+	}
+}
+.navLinks {
+	transition: color 100ms linear;
+	color: $clr-black;
+	font-weight: 800;
+	font-size: 1.8rem;
+}

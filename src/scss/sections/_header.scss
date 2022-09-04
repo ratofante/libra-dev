@@ -1,0 +1,59 @@
+header {
+	@include displayFlex(column, center, center);
+	margin-top: calc($navbarHeight + 5rem);
+	padding: $padding-mobile;
+	height: auto;
+}
+.home {
+	@include displayFlex(column, center, center);
+
+	&__intro {
+		@include displayFlex(column, center, center);
+		@include tablet {
+			flex-direction: row;
+			width: 500px;
+			justify-content: space-around;
+			margin-bottom: 2rem;
+		}
+		&__img {
+			@include bigImgs;
+			& img {
+				width: 100%;
+				margin: auto;
+			}
+		}
+		&__text {
+			@include tablet {
+				max-width: 230px;
+				padding-left: 1rem;
+			}
+			& h1 {
+				text-align: center;
+				@include tablet {
+					text-align: left;
+				}
+			}
+			& p {
+				@include basicText;
+				text-align: center;
+
+				@include tablet {
+					max-width: 230px;
+					text-align: left;
+				}
+			}
+		}
+	}
+	&__atajos {
+		display: none;
+		@include tablet {
+			display: block;
+			margin-bottom: 4rem;
+		}
+	}
+	&__workAtajos {
+		& .linkAtajo {
+			width: 105px;
+		}
+	}
+}

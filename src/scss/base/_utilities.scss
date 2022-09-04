@@ -1,0 +1,124 @@
+// Clases de utilidad
+.d-flex {
+	display: flex !important;
+}
+.d-none {
+	display: none !important;
+}
+.d-block {
+	display: block !important;
+}
+.bg-blue {
+	background-color: $clr-blue;
+}
+.bg-light-blue {
+	background-color: $clr-light-blue;
+}
+.bg-brown {
+	background-color: $clr-brown;
+}
+.bg-light-brown {
+	background-color: $clr-light-brown;
+}
+.bg-green {
+	background-color: $clr-green;
+}
+.bg-light-green {
+	background-color: $clr-light-green;
+}
+
+// Mixins
+@mixin displayFlex($direction, $align, $justify) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+// Animaciones
+@-webkit-keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.rotate {
+	-webkit-animation: rotate-center 2s linear infinite both;
+	animation: rotate-center 2s linear infinite both;
+}
+
+/*Animación para el botón de la nav*/
+@keyframes shrinkAndGrow {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 0;
+	}
+	100% {
+		scale: 1;
+	}
+}
+@keyframes scaleUp {
+	from {
+		scale: 0;
+	}
+	to {
+		scale: 1;
+	}
+}
+@keyframes scaleDown {
+	from {
+		scale: 1;
+	}
+	to {
+		scale: 0;
+		visibility: hidden;
+	}
+}
+.scaleUp {
+	animation: scaleUp 200ms ease forwards;
+}
+.scaleUpSlow {
+	animation: scaleUp 500ms ease forwards;
+}
+.scaleDown {
+	animation: scaleDown 200ms ease forwards;
+}
+.shrinkAndGrow {
+	animation: shrinkAndGrow 250ms linear;
+}
+@keyframes showFromRight {
+	from {
+		transform: translateX(120%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+@keyframes showFromLeft {
+	from {
+		transform: translateX(-120%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}

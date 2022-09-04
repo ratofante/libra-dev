@@ -1,0 +1,22 @@
+.contact {
+	margin-block: $marginTopSections;
+	&__text {
+		margin-bottom: $marginTopSections;
+		& h2 {
+			text-align: center;
+		}
+		& p {
+			text-align: center;
+			margin: auto;
+		}
+	}
+	&__redes {
+		@include displayFlex(row, center, space-between);
+		width: 175px;
+		margin-inline: auto;
+
+		& a {
+			width: 40px;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.footer {
+	&__top {
+		position: relative;
+		top: 6px;
+	}
+	&__bottom {
+		& img {
+			width: 100%;
+		}
+	}
+	&__body {
+		background-color: $clr-blue;
+		padding-top: 8rem;
+		padding-bottom: 4rem;
+		&__logo {
+			margin: 0px auto 2rem auto;
+			width: 80px;
+			cursor: pointer;
+			& img {
+				transition: scale 150ms linear;
+			}
+			&:hover img {
+				scale: 1.075;
+			}
+		}
+		&__text {
+			color: $clr-white;
+			text-align: center;
+			& h2 {
+				font-size: 2rem;
+			}
+			& p {
+				font-size: 1.4rem;
+			}
+		}
+		&__icons {
+			@include displayFlex(column, center, center);
+			& img {
+				width: 40px;
+				color: $clr-white;
+				margin-top: 2rem;
+				transition: scale 120ms linear;
+				&:hover {
+					scale: 1.075;
+				}
+			}
+		}
+	}
+}

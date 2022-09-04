@@ -1,0 +1,40 @@
+.goToBtn {
+	$size: 85px;
+	position: relative;
+	border: none;
+	color: white;
+	height: $size;
+	width: $size;
+	border-radius: 50%;
+	font-size: 1.7rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: scale 150ms ease;
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		content: "";
+		display: block;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		transition: scale 150ms ease, background-color 150ms ease;
+	}
+	&:hover {
+		scale: 1.1;
+		&::after {
+			scale: 1.15;
+			background-color: #4545453b;
+		}
+	}
+	@include tablet {
+		width: calc($size + 15px);
+		height: calc($size + 15px);
+		&::after {
+			width: calc($size + 15px);
+			height: calc($size + 15px);
+		}
+	}
+}

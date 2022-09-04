@@ -1,0 +1,20 @@
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/breakpoints";
+@import "./base/fonts";
+@import "./base/utilities";
+@import "./base/general";
+
+@import "./components/logo";
+@import "./components/goToBtn";
+@import "./components/atajos";
+@import "./components/technologies";
+
+@import "./sections/navbar";
+@import "./sections/header";
+@import "./sections/about";
+@import "./sections/myWork";
+@import "./sections/contact.scss";
+@import "./sections/footer";
+@import "./sections/workSections";
+@import "./sections/portfolio";

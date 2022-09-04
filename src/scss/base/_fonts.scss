@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@300;400;600;800&display=swap");
+
+:root {
+	font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Alfa Slab One", cursive;
+}
+p,
+a,
+span,
+button,
+li {
+	font-family: "Poppins", sans-serif;
+}
+
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+
+@mixin basicText {
+	max-width: 280px;
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
+	@include tablet {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+	}
+}
+
+.mainText {
+	@include basicText;
+}
+@mixin mainTitle {
+	font-size: 4.2rem;
+	@include tablet {
+		font-size: 4.6rem;
+	}
+}
+@mixin secTitle {
+	font-size: 3.8rem;
+}
+.mainTitle {
+	@include mainTitle;
+}
+.secTitle {
+	@include secTitle;
+}
+@mixin thirdTitle {
+	text-align: center;
+	font-size: 2rem;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 2rem;
+}
+
+.fw-700 {
+	font-weight: 700 !important;
+}

@@ -1,0 +1,41 @@
+.technologies {
+	width: 100%;
+	& h3 {
+		@include thirdTitle;
+	}
+	&__icons {
+		width: 100%;
+		height: 75px;
+		display: grid;
+		gap: 1.5rem;
+		grid-auto-flow: column;
+		grid-auto-columns: 15%;
+		align-items: center;
+		justify-items: center;
+		overflow-x: auto;
+		overflow-y: hidden;
+		overscroll-behavior-inline: contain;
+		scroll-snap-type: inline mandatory;
+		scroll-padding-inline: 1rem;
+		padding-bottom: 1rem;
+		@include mobileLarge {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			height: auto;
+			margin-inline: auto;
+			gap: 3rem;
+		}
+		& img {
+			width: 100%;
+			max-width: 36px;
+			scroll-snap-align: start;
+		}
+	}
+}
+@supports (scrollbar-width: thin) {
+	.technologies__icons {
+		scrollbar-width: thin;
+		scrollbar-color: #030029 #e8e8e8;
+	}
+}

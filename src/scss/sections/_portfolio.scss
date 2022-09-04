@@ -1,0 +1,118 @@
+@mixin textFichas {
+	display: block;
+	font-size: 1.2rem;
+	color: $clr-black;
+	@include tablet {
+		font-size: 1.4rem;
+	}
+}
+.fichasContainer {
+	padding: $padding-mobile;
+	@include displayFlex(column, center, center);
+	gap: 6rem;
+}
+.ficha {
+	padding: $padding-mobile;
+	border-radius: $border-radius;
+	width: clamp(300px, 90vw, 450px);
+	background-color: #4e3b1c;
+	@include tablet {
+		width: clamp(300px, 90vw, 690px);
+	}
+	@include desktop {
+		width: clamp(600px, 95vw, 1260px);
+		padding: 2rem 3rem;
+	}
+	&:nth-child(2n) {
+		background-color: $clr-blue;
+	}
+	&:nth-child(3n) {
+		background-color: $clr-green;
+	}
+	&:nth-child(odd) .ficha__layout {
+		@include tablet {
+			flex-direction: row-reverse;
+		}
+	}
+	&__layout {
+		@include desktop {
+			@include displayFlex(row, flex-start, flex-start);
+			gap: 3rem;
+		}
+	}
+	&__column {
+		@include desktop {
+			width: 100%;
+		}
+		&:first-child {
+			@include desktop {
+				width: 50%;
+			}
+		}
+	}
+	&__column:last-child {
+		height: auto;
+	}
+	&__title {
+		& h3 {
+			font-family: "Poppins", sans-serif;
+			font-size: 1.8rem;
+			letter-spacing: 0.2rem;
+			color: $clr-white;
+			margin-bottom: 0.75rem;
+			@include tablet {
+				$margin: 0.75rem;
+				margin-block: 1rem calc($margin + 1rem);
+				margin-inline: 2rem;
+				font-size: clamp(1.8rem, 10vw, 2.3rem);
+			}
+		}
+	}
+	&__subTitle {
+		font-family: "Poppins", sans-serif;
+		margin: 0px;
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+	&__description {
+		border-radius: $border-radius;
+		background-color: $clr-white;
+		padding: clamp(1rem, 3vw, 4rem);
+		margin-bottom: 1.5rem;
+		@include desktop {
+			padding: 2rem;
+		}
+		& p {
+			@include textFichas;
+		}
+	}
+	&__caracteristicas {
+		@extend .ficha__description;
+		& ul {
+			padding: 0px;
+		}
+		& li {
+			@include textFichas;
+			list-style-type: disc;
+			list-style-position: inside;
+			display: flow-root list-item;
+			margin-bottom: 0.5rem;
+		}
+	}
+	&__media {
+		@extend .ficha__description;
+		background-color: inherit;
+		@include desktop {
+			padding: 0rem;
+		}
+		& iframe {
+			width: 100%;
+		}
+	}
+	&__enlaces {
+		@extend .ficha__description;
+		& a {
+			@include textFichas;
+		}
+	}
+}

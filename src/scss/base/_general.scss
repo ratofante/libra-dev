@@ -1,0 +1,15 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: $clr-white;
+	min-height: 300vh;
+}
+
+@mixin bigImgs {
+	width: 200px;
+	@include tablet {
+		width: 230px;
+	}
+}
