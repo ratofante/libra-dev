@@ -35,10 +35,10 @@ const HomeAbout = () => {
                      </ul>
                   </div>
                </div>
-               <button>
+               <a href="/RESUME-rodrigo-gonzalez-wilkens.pdf" download>
                   <span>Descargar Curriculum Vitae</span>
                   <Download />
-               </button>
+               </a>
             </div>
             <div className="about__technologies">
                <Technologies />

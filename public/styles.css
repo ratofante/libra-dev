@@ -741,7 +741,7 @@ header {
     width: 70px;
   }
 }
-.about__cv button {
+.about__cv a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -758,13 +758,13 @@ header {
   transition: scale 100ms linear, background-color 100ms linear;
   border: none;
 }
-.about__cv button span {
+.about__cv a span {
   width: 115px;
   font-weight: 500;
   font-size: 1.1rem;
   color: #e8e8e8;
 }
-.about__cv button svg {
+.about__cv a svg {
   color: #080808;
   width: 26px;
   height: 26px;
@@ -772,7 +772,7 @@ header {
   border-radius: 50%;
   padding: 0.25rem;
 }
-.about__cv button:hover {
+.about__cv a:hover {
   scale: 1.05;
   background-color: #231e62;
 }

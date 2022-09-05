@@ -89,7 +89,7 @@
 				}
 			}
 		}
-		& button {
+		& a {
 			@include displayFlex(row, center, space-between);
 			cursor: pointer;
 			background-color: $clr-blue;

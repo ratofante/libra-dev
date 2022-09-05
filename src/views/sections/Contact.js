@@ -15,10 +15,10 @@ const Contact = () => {
                <p className='mainText'>Puedes contactarme por las siguientes redes:</p>
             </div>
             <div className="contact__redes">
-               <a href="http://">
+               <a href="https://www.linkedin.com/in/rodrigo-g-wilkens/">
                   <img src={Linkedin} alt="Linkedin Logo" />
                </a>
-               <a href="http://">
+               <a href="https://wa.me/541156140699">
                   <img src={Whatsapp} alt="Whatsapp Logo" />
                </a>
                <a href="mailto:gwilkens.r@gmail.com" >
