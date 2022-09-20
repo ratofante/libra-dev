@@ -2,9 +2,14 @@
 	&__top {
 		position: relative;
 		top: 6px;
+		& img {
+			width: 100%;
+			object-fit: unset;
+		}
 	}
 	&__bottom {
 		& img {
+			object-fit: unset;
 			width: 100%;
 		}
 	}

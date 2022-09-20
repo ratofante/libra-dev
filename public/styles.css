@@ -414,6 +414,12 @@ body {
     scrollbar-color: #030029 #e8e8e8;
   }
 }
+.separator__top img,
+.separator__bottom img {
+  width: 100%;
+  object-fit: unset;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -853,7 +859,12 @@ header {
   position: relative;
   top: 6px;
 }
+.footer__top img {
+  width: 100%;
+  object-fit: unset;
+}
 .footer__bottom img {
+  object-fit: unset;
   width: 100%;
 }
 .footer__body {
